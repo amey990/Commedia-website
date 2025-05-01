@@ -1,4 +1,4 @@
-// import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState, useRef } from "react";
 // import "./Stats.css";
 
 // const statsData = [
@@ -9,42 +9,71 @@
 // ];
 
 // const Stats = () => {
-//   const [counts, setCounts] = useState(
-//     statsData.map(() => 0)
-//   );
+//   const [counts, setCounts] = useState(statsData.map(() => 0));
 //   const [animated, setAnimated] = useState(false);
+//   const statsRef = useRef(null);
+
+//   useEffect(() => {
+//     const observer = new IntersectionObserver(
+//       ([entry]) => {
+//         if (entry.isIntersecting && !animated) {
+//           setAnimated(true);
+//         }
+//       },
+//       {
+//         root: null,
+//         rootMargin: "0px",
+//         threshold: 0.5 // Trigger when 50% of component is visible
+//       }
+//     );
+
+//     if (statsRef.current) {
+//       observer.observe(statsRef.current);
+//     }
+
+//     return () => {
+//       if (statsRef.current) {
+//         observer.unobserve(statsRef.current);
+//       }
+//     };
+//   }, [animated]);
 
 //   useEffect(() => {
 //     if (animated) {
-//       let newCounts = [...counts];
-//       statsData.forEach((stat, index) => {
+//       const intervals = statsData.map((stat, index) => {
 //         let start = 0;
 //         const increment = Math.ceil(stat.target / 100);
-//         const timer = setInterval(() => {
+        
+//         return setInterval(() => {
 //           start += increment;
 //           if (start >= stat.target) {
-//             newCounts[index] = stat.target;
-//             setCounts([...newCounts]);
-//             clearInterval(timer);
+//             setCounts(prev => {
+//               const newCounts = [...prev];
+//               newCounts[index] = stat.target;
+//               return newCounts;
+//             });
+//             clearInterval(intervals[index]);
 //           } else {
-//             newCounts[index] = start;
-//             setCounts([...newCounts]);
+//             setCounts(prev => {
+//               const newCounts = [...prev];
+//               newCounts[index] = start;
+//               return newCounts;
+//             });
 //           }
 //         }, 20);
 //       });
+
+//       return () => intervals.forEach(clearInterval);
 //     }
 //   }, [animated]);
 
 //   return (
-//     <div
-//       className="stats-container"
-//       onMouseEnter={() => setAnimated(true)} // Start counting when hovered
-//     >
+//     <div className="stats-container" ref={statsRef}>
 //       <h2 className="stats-title">STATS</h2>
 //       <div className="stats-grid">
 //         {statsData.map((stat, index) => (
 //           <div key={stat.id} className="stat-item">
-//             <p className="stat-label">{stat.label}</p> {/* Label on top */}
+//             <p className="stat-label">{stat.label}</p>
 //             <span className="count-number">
 //               {counts[index]}
 //               {stat.suffix}
@@ -57,6 +86,8 @@
 // };
 
 // export default Stats;
+
+// src/components/Stats.js
 import React, { useEffect, useState, useRef } from "react";
 import "./Stats.css";
 
@@ -73,6 +104,7 @@ const Stats = () => {
   const statsRef = useRef(null);
 
   useEffect(() => {
+    const node = statsRef.current;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !animated) {
@@ -86,44 +118,44 @@ const Stats = () => {
       }
     );
 
-    if (statsRef.current) {
-      observer.observe(statsRef.current);
+    if (node) {
+      observer.observe(node);
     }
 
     return () => {
-      if (statsRef.current) {
-        observer.unobserve(statsRef.current);
+      if (node) {
+        observer.unobserve(node);
       }
     };
   }, [animated]);
 
   useEffect(() => {
-    if (animated) {
-      const intervals = statsData.map((stat, index) => {
-        let start = 0;
-        const increment = Math.ceil(stat.target / 100);
-        
-        return setInterval(() => {
-          start += increment;
-          if (start >= stat.target) {
-            setCounts(prev => {
-              const newCounts = [...prev];
-              newCounts[index] = stat.target;
-              return newCounts;
-            });
-            clearInterval(intervals[index]);
-          } else {
-            setCounts(prev => {
-              const newCounts = [...prev];
-              newCounts[index] = start;
-              return newCounts;
-            });
-          }
-        }, 20);
-      });
+    if (!animated) return;
 
-      return () => intervals.forEach(clearInterval);
-    }
+    const intervals = statsData.map((stat, index) => {
+      let start = 0;
+      const increment = Math.ceil(stat.target / 100);
+
+      return setInterval(() => {
+        start += increment;
+        if (start >= stat.target) {
+          setCounts(prev => {
+            const newCounts = [...prev];
+            newCounts[index] = stat.target;
+            return newCounts;
+          });
+          clearInterval(intervals[index]);
+        } else {
+          setCounts(prev => {
+            const newCounts = [...prev];
+            newCounts[index] = start;
+            return newCounts;
+          });
+        }
+      }, 20);
+    });
+
+    return () => intervals.forEach(clearInterval);
   }, [animated]);
 
   return (
