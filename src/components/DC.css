@@ -1,0 +1,79 @@
+/* src/components/dc.css */
+.dc-container {
+  padding: 40px;
+  background: #111; /* dark background */
+  min-height: 100vh;
+  color: #fff;
+}
+
+.dc-heading {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #00bcd4; /* bright cyan heading */
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.dc-case-list {
+  display: flex;
+  flex-wrap: wrap; /* allow wrap */
+  gap: 40px;
+  justify-content: flex-start; /* align items from left */
+}
+
+.dc-card {
+  width: 280px;
+  background-color: #1c1c1c; /* dark card */
+  border: 1px solid #333;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease;
+}
+
+.dc-card:hover {
+  transform: translateY(-6px);
+}
+
+.dc-image {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  background-color: #222;
+}
+
+.dc-title {
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+}
+
+
+@media (max-width: 768px) {
+  .dc-heading {
+    font-size: 10px;        /* smaller heading */
+    margin-bottom: 20px;    /* less space below */
+  }
+
+  .dc-case-list {
+    justify-content: center; /* center all cards */
+    gap: 20px;               /* tighter gap between cards */
+  }
+
+  .dc-card {
+    width: calc(50% - 20px); /* two cards per row */
+  }
+
+  .dc-image {
+    height: 180px;           /* shorter images on phone */
+  }
+
+  .dc-title {
+    font-size: 28px;         /* slightly smaller title text */
+    padding: 12px 8px;       /* tighter padding */
+  }
+}

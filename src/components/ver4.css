@@ -1,0 +1,54 @@
+.ver4-container {
+  padding: 40px 20px;
+  background-color: #111; /* dark background */
+  min-height: 100vh;
+  color: #fff;
+}
+
+.ver4-heading {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #00bcd4; /* bright cyan heading */
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.ver4-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* center align like DM */
+  gap: 60px; /* consistent gap like DM */
+}
+
+.ver4-card {
+  width: 280px;
+  background-color: #1c1c1c;
+  border: 1px solid #333;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  transition: transform 0.25s ease;
+  cursor: pointer;
+}
+
+.ver4-card:hover {
+  transform: translateY(-8px);
+}
+
+.ver4-img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  background-color: #222;
+}
+
+.ver4-title {
+  padding: 16px 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.5px;
+}

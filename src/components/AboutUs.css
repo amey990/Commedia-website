@@ -1,0 +1,148 @@
+.about-container {
+  position: relative;
+  background-color: #1a1a1a;
+  padding: 50px 0;
+  text-align: center;
+}
+
+
+.team-bg {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.team-bg img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+/* Team Box */
+.team-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  background: rgba(50, 50, 50, 0.5);
+  padding: 30px;
+  border-radius: 20px;
+}
+
+/* Team Grid Layout (1-3-4 Pyramid) */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 20px;
+  max-width: 900px;
+  margin: auto;
+  justify-items: center;
+  align-items: center;
+}
+
+/* Defining Positions */
+.team-member:nth-child(1) { grid-column: 2 / span 2; } /* Single Centered */
+.team-member:nth-child(2) { grid-column: 1; }
+.team-member:nth-child(3) { grid-column: 2; }
+.team-member:nth-child(4) { grid-column: 3; }
+.team-member:nth-child(5) { grid-column: 1; }
+.team-member:nth-child(6) { grid-column: 2; }
+.team-member:nth-child(7) { grid-column: 3; }
+.team-member:nth-child(8) { grid-column: 4; }
+
+/* Custom Shape */
+.custom-shape {
+  width: 180px;
+  height: 230px;
+  position: relative;
+  background: #222;
+  clip-path: polygon(0 0, 80% 0, 100% 20%, 100% 100%, 20% 100%, 0 80%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.custom-shape:hover {
+  transform: scale(1.05);
+}
+
+/* Border Animation */
+.custom-shape::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  clip-path: inherit;
+  animation: borderFlow 2s linear infinite;
+}
+
+/* Image Inside Shape */
+.custom-shape img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Fix Text Alignment */
+.team-member {
+  text-align: center;
+  font-size: 16px;
+  color: white;
+}
+
+.team-member h3 {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.team-member p {
+  font-size: 14px;
+  margin: 5px 0;
+  opacity: 0.8;
+}
+
+/* Animation */
+@keyframes borderFlow {
+  0% {
+    border-image-source: linear-gradient(90deg, transparent, cyan);
+    border-image-slice: 1;
+  }
+  35% {
+    border-image-source: linear-gradient(180deg, transparent, cyan);
+  }
+  50% {
+    border-image-source: linear-gradient(270deg, transparent, cyan);
+  }
+  75% {
+    border-image-source: linear-gradient(360deg, transparent, cyan);
+  }
+  100% {
+    border-image-source: linear-gradient(90deg, transparent, cyan);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .custom-shape {
+    width: 140px;
+    height: 180px;
+  }
+}

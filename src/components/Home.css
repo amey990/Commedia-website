@@ -1,0 +1,146 @@
+/* Import Font */
+@font-face {
+  font-family: 'BARLOW-BOLD';
+  src: url('/src/assets/Barlow-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'BARLOW-EXTRALIGHT';
+  src: url('/src/assets/Barlow-ExtraLight.ttf') format('truetype');
+}
+
+/* General Page Styles */
+.home-container {
+  width: 100%;
+  color: white;
+  font-family: 'BARLOW-EXTRALIGHT', sans-serif;
+  text-align: center;
+  background-color: #070a0f;
+  padding: 20px 0;
+}
+
+/* Wrapper for Products and Solutions to align them vertically */
+.sections-wrapper {
+  display: flex;
+  flex-direction: column;  /* Stack sections vertically */
+  gap: 50px;  /* Add space between Product and Solution sections */
+  width: 100%;
+  margin-top: 50px;  /* Ensure proper space from the top */
+  padding: 0 20px;
+  align-items: center; /* Center both sections horizontally */
+}
+
+/* Solutions Section */
+.solutions-container {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #070a0f;
+  color: white;
+  width: 100%; /* Make sure it stretches full width */
+}
+
+.solutions-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+/* Solutions Content */
+.solutions-content {
+  display: flex;
+  flex-direction: row; /* Align image and text side by side */
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  padding: 20px;
+  margin: 0 auto;
+  background: #070a0f;
+  border-radius: 15px;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Products Section */
+.products-container {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #070a0f;
+  color: white;
+  width: 100%;
+  transform: translateX(-70px);
+}
+
+.products-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+/* Products Content */
+.products-content {
+  display: flex;
+  flex-direction: row;  /* Align image and text side by side */
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  padding: 20px;
+  margin: 0 auto;
+  background: #070a0f;
+  border-radius: 15px;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .solutions-content, .products-content {
+    flex-direction: column;  /* Stack content vertically on smaller screens */
+    gap: 20px;
+  }
+
+  .products-solutions-wrapper {
+    align-items: center;  /* Center products and solutions */
+  }
+}
+
+/* Stats Counter */
+.stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+.stat {
+  font-size: 40px;
+  font-family: 'BARLOW-BOLD', sans-serif;
+}
+
+/* Achievements Section */
+.achievements {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.achievements h2 {
+  font-family: 'BARLOW-BOLD', sans-serif;
+  font-size: 50px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+/* Partners Section */
+.partners {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.partners h2 {
+  font-family: 'BARLOW-BOLD', sans-serif;
+  font-size: 50px;
+  text-transform: uppercase;
+}

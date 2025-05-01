@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600;700&display=swap');
+
+/* ---------- Cover Section ---------- */
+.cover {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 650px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cover-title {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.5rem;
+  font-family: "Barlow", sans-serif;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+
+/* ---------- Main Container ---------- */
+.solution-main-container {
+  background-color: #070a0f;
+  width: 100%;
+}
+
+/* ---------- Solution List ---------- */
+.solutions-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* ---------- Solution Card ---------- */
+.solution-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* ---------- Image on Left ---------- */
+.solution-image {
+  width: 40%;
+  height: auto;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+/* ---------- Text on Right (Left-Aligned, No Bullets) ---------- */
+.solution-content {
+  width: 60%;
+  color: white;
+  text-align: left;
+}
+
+.solution-content h2 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.solution-content p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.solution-content ul {
+  padding: 0;
+  margin: 0;
+}
+
+.solution-content li {
+  font-size: 1rem;
+  margin-bottom: 6px;
+  list-style: none;
+}
+
+/* ---------- Customers Section ---------- */
+.customers-container {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.customer-section h2 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.customer-section p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+/* ---------- Responsive ---------- */
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .solutions-list {
+    padding: 40px 15px; /* Match product page padding */
+    box-sizing: border-box;
+  }
+
+  .solution-card {
+    flex-direction: column;
+    width: calc(100% - 30px); /* Same side gap as products */
+    margin: 20px auto; /* Centered alignment */
+    padding: 15px;
+    box-sizing: border-box; /* Include padding in width */
+  }
+
+  .solution-image {
+    width: 100%; /* Full container width */
+    max-height: 200px;
+    margin: 0 0 15px 0; /* Consistent bottom spacing */
+    border-radius: 8px; /* Slightly reduce for mobile */
+  }
+
+  .solution-content {
+    width: 100%;
+    padding: 0 8px; /* Text side padding */
+    text-align: left;
+  }
+
+  .solution-content h2 {
+    font-size: 1.4rem;
+    margin-bottom: 8px; /* Tighter spacing */
+  }
+
+  .solution-content li {
+    font-size: 0.95rem;
+    padding-left: 20px; /* Add bullet space */
+    position: relative;
+    word-break: break-word; /* Prevent overflow */
+  }
+
+  .solution-content li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #fff;
+  }
+}

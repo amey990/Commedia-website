@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600;700&display=swap');
+
+/* ---------- Page Background ---------- */
+.product-main {
+  background-color: #070a0f;
+  min-height: 100vh;
+}
+
+/* ---------- Cover Section ---------- */
+.cover {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cover-title {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.5rem;
+  font-family: "Barlow", sans-serif;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+/* ---------- Products Container ---------- */
+.products-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  transform: translateX(-14px);
+  background-color: #070a0f;
+}
+
+/* ---------- Product Card ---------- */
+.product-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* ---------- Image ---------- */
+.product-image {
+  width: 40%;
+  height: auto;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+/* ---------- Text Content ---------- */
+.product-content {
+  width: 60%;
+  color: white;
+  text-align: left;
+}
+
+.product-content h2 {
+  font-size: 1.6rem;
+  font-family: "Barlow", sans-serif;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.product-content p {
+  font-size: 1rem;
+  font-family: "Barlow", sans-serif;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.product-points {
+  padding: 0;
+  margin: 0;
+}
+
+.product-points li {
+  font-size: 1rem;
+  margin-bottom: 6px;
+  list-style: none;
+  font-family: "Barlow", sans-serif;
+}
+
+/* ---------- Customers Section ---------- */
+.customers-container {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.customers-container h2 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.customers-container p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+/* ---------- Responsive ---------- */
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  /* Fix container alignment */
+  .products-container {
+    transform: none; /* Remove horizontal shift */
+    padding: 40px 15px; /* Add right padding */
+    box-sizing: border-box;
+  }
+
+  .product-section {
+    flex-direction: column;
+    width: calc(100% - 30px); /* Reduce width by 30px total */
+    margin: 20px auto; /* Center the card */
+    padding: 15px;
+    box-sizing: border-box; /* Include padding in width */
+  }
+
+  .product-image {
+    width: 100%; /* Full width of container */
+    max-height: 200px;
+    margin: 0 0 15px 0; /* Reset right margin */
+  }
+
+  .product-content {
+    width: 100%;
+    padding: 0 8px; /* Add side padding */
+    text-align: left;
+  }
+
+  .product-content h2 {
+    font-size: 1.4rem;
+  }
+
+  .product-points li {
+    font-size: 0.95rem;
+    word-break: break-word; /* Prevent text overflow */
+  }
+}

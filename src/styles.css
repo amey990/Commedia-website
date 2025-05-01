@@ -1,0 +1,31 @@
+/* Reset body and html styles */
+html, body {
+  height: 100%;  /* Ensures the body takes the full height */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevents horizontal scroll */
+}
+
+/* Main container to ensure footer always stays at the bottom */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;  /* Full viewport height */
+  width: 100%;
+}
+
+/* Main content area that expands to fill available space */
+.main-content {
+  flex: 1;  /* Expands this area to fill available space */
+}
+
+/* Footer Styles */
+.footcomp {
+  background-color: #222; /* Footer styling */
+  color: white;
+  text-align: center;
+  padding: 15px;
+  width: 100%;
+  position: relative;  /* Keeps it in normal flow */
+  margin-top: auto;  /* Pushes footer to the bottom of the screen */
+}

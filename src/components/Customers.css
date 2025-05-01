@@ -1,0 +1,201 @@
+/* .customers-section {
+  text-align: center;
+  padding: 40px 0;
+  background-color: #070a0f;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.customers-heading {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 17px;
+}
+
+.customers-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.customers-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  white-space: nowrap;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.customers-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.customer-logo {
+  max-width: 180px;
+  max-height: 100px;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.7;
+  transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
+  margin: 0 20px;
+  flex-shrink: 0;
+  align-self: center; 
+}
+
+
+.customer-logo:hover {
+  opacity: 1;
+  filter: brightness(0) invert(1);
+  transform: scale(1.2);
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.left-arrow {
+  left: 0;
+  margin-left:3px;
+}
+
+.right-arrow {
+  right: 0;
+  margin-right: 18px;
+}
+.small-logo {
+  max-height: 30px; 
+}
+
+
+@media (max-width: 768px) {
+  .arrow {
+    font-size: 24px;
+    padding: 8px;
+  }
+
+  .customer-logo {
+    max-width: 120px;
+    margin: 0 10px;
+  }
+} */
+
+.customers-section {
+  text-align: center;
+  padding: 40px 0;
+  background-color: #070a0f;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.customers-heading {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 17px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .customers-heading {
+    font-size: 20px; /* Reduced from 24px */
+    margin-bottom: 12px; /* Reduced from 17px */
+  }
+}
+
+/* Rest of your existing CSS remains unchanged */
+.customers-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.customers-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  white-space: nowrap;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.customers-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.customer-logo {
+  max-width: 180px;
+  max-height: 100px;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.7;
+  transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
+  margin: 0 20px;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.customer-logo:hover {
+  opacity: 1;
+  filter: brightness(0) invert(1);
+  transform: scale(1.2);
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.left-arrow {
+  left: 0;
+  margin-left:3px;
+}
+
+.right-arrow {
+  right: 0;
+  margin-right: 18px;
+}
+
+.small-logo {
+  max-height: 30px;
+}
+
+@media (max-width: 768px) {
+  .arrow {
+    font-size: 24px;
+    padding: 8px;
+  }
+
+  .customer-logo {
+    max-width: 120px;
+    margin: 0 10px;
+  }
+}

@@ -1,0 +1,92 @@
+.life-container {
+
+    width: 100vw;
+    height: auto;          /* allow height to auto-grow */
+    padding: 30px 0;       /* a little vertical breathing room */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #070a0f;
+    overflow: hidden;
+    margin-top: 0;
+   
+ 
+}
+
+.life-heading {
+  
+  
+  font-size: 2rem;       /* smaller than 36px */
+  color: white;
+  text-transform: uppercase;
+  margin: 0 0 15px;      /* less bottom gap */
+  text-align: center;
+}
+
+.slider-container {
+  width: 100%;
+  max-width: 1200px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.slider-image {
+  position: absolute;
+  width: 400px; /* Adjusted width */
+  height: 250px; /* Adjusted height */
+  border-radius: 10px;
+  object-fit: cover;
+  transition: all 0.5s ease-in-out;
+}
+.image-wrapper {
+  position: relative;
+}
+
+.image-text-overlay {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* shrink even further on phones */
+@media (max-width: 768px) {
+  .life-container {
+    padding: 20px 0;
+  }
+
+  .life-heading {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+
+  .slider-container {
+    height: 250px;       /* optional: make your carousel shorter on phones */
+  }
+
+  .slider-image {
+    width: 250px;        /* shrink images to fit mobile screens */
+    height: 160px;
+  }
+}
+

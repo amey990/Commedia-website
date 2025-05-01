@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600&display=swap');
+
+body {
+  font-family: 'Barlow', sans-serif;
+}
+
+
+.our-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #070a0f;
+    color: white;
+  }
+  
+  .our-heading {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  
+  .our-content-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+    height: 400px;
+    transition: opacity 20s ease-in-out;
+  }
+  
+  .our-content {
+    width: 50%;
+    text-align: left;
+    margin-right:30px;
+  }
+  
+  .our-content h3 {
+    color: #00d4ff;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .our-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .our-image {
+    width: 50%;
+    text-align: center;
+  }
+  
+  .our-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    padding-left: 40px;
+  }
+  
+  .fade-in {
+    opacity: 1;
+  }
+  
+  .fade-out {
+    opacity: 0;
+  }
+  
+  @media (max-width: 768px) {
+    /* Reserve the original desktop height so the next section stays put */
+    .our-content-container {
+      height: 200px;          /* same as your desktop slider height */
+      margin-bottom: 20px;    /* give a little breathing room */
+    }
+  
+    /* Then hide text and make image full-bleed as before */
+    .our-content {
+      display: none;
+    }
+    .our-image {
+      width: 100%;
+      margin: 0 auto;
+    }
+    .our-image img {
+      width: 100%;
+      height: 100%;          /* fill that 400px container */
+      object-fit: cover;
+      padding-left: 0;
+    }
+  
+    /* Tweak heading a bit if you like */
+    .our-heading {
+      font-size: 1.3rem;
+      margin-bottom: 16px;
+    }
+  }
+  

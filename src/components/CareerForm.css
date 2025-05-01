@@ -1,0 +1,63 @@
+/* Container styling */
+.career-container {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  /* Title styling */
+  .career-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  /* Form styling */
+  .career-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* Input fields */
+  .career-form input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  /* File Upload */
+  .file-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .file-upload input {
+    margin-top: 5px;
+  }
+  
+  /* Submit button */
+  .submit-button {
+    background-color: #00bfff;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .submit-button:hover {
+    background-color: #0088cc;
+    transform: scale(1.05);
+  }
+  
