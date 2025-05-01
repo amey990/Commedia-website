@@ -1,7 +1,6 @@
 import React from "react";
 import { useParams, useHistory } from "react-router-dom";
 import "./VerticalDetail.css";
-import Customers from "./Customers";
 import Chatbot from "../components/Chatbot"; // Import chatbot component
 
 // Images

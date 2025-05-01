@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from "react";
-import { useHistory, useLocation } from "react-router-dom";
+import React, { useEffect,  } from "react";
+import { useHistory,  } from "react-router-dom";
 
 import "./Bio.css";
 import leader1 from "../assets/leader1.jpg";

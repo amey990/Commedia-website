@@ -10,13 +10,7 @@ import img4 from "../assets/life4.jpg";
 import img5 from "../assets/life5.jpg";
 
 const images = [img1, img2, img3, img4, img5];
-const captions = [
-  "Diwali Celebration 🎆",
-  "Team Outing 🌿",
-  "Tech Conference 📢",
-  "Hackathon Night 💻",
-  "Casual Friday 🎉",
-];
+
 const LifeAtCommedia = () => {
   const [index, setIndex] = useState(2); // Start from the center image (index 2)
 

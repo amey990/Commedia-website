@@ -4,9 +4,7 @@ import ScrollToTop from "./components/ScrollToTop";
 
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
-import Solutions from "./components/Solutions";
 import SolutionMain from "./components/SolutionMain";
-import Products from "./components/Products";
 import ProductMain from "./components/ProductMain";
 import Achievements from "./components/Achievements";
 import Customers from "./components/Customers";

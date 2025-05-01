@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./CaseStudies.css";
 import PTGReusable from "./PTGReusable";
-import PTG from "./PTG"; // Popup component
 import dc1 from "../assets/dc1.png";
 import dc2 from "../assets/dc2.png";
 import dc3 from "../assets/dc3.png";

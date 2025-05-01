@@ -77,7 +77,6 @@
 
 import React, { useState, useRef } from "react"; 
 import "./Career.css";
-import uploadIcon from "../assets/upload-icon.png";
 import careerImage1 from "../assets/caa.jpeg";
 import Chatbot from "../components/Chatbot";
 
