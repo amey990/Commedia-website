@@ -119,7 +119,7 @@ const Chatbot = () => {
               <RiRobot2Line className="bot-icon-svg" />
             </div>
             <div className="bot-status">
-              <span className="bot-title">CPAL</span>
+              <span className="bot-title">c-PAL</span>
               <div className="status-indicator">
                 <span className="status-dot"></span>
                 <span className="status-text">Online Now</span>

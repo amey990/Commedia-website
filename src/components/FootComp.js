@@ -212,18 +212,6 @@ const FootComp = () => {
 
       {/* Bottom Curve & Copyright */}
       <div className="bottom-section">
-        {/* <img
-          src={nlog}
-          alt="nlog"
-          className="red-curve"
-          style={{
-            width: '100%',
-            maxWidth: '1000px',
-            height: 'auto',
-            maxHeight: '600px',
-            marginTop: '-110px',
-          }}
-        /> */}
         <img
         src={nlog}
         alt="nlog"

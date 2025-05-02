@@ -176,8 +176,8 @@
   font-family: 'Roboto Condensed', sans-serif;
   position: absolute;
   color: white;
-  bottom: 10px;
-  right: 20px;
+  bottom: 6px;
+  right: 110px;
   font-size: 0.875rem;
   margin-right: 1rem;
 }
@@ -296,7 +296,7 @@
     .website-text {
       position: absolute;
       bottom: 20px;        /* adjust up/down as needed */
-      left: 53%;
+      left: 48%;
       transform: translateX(-50%);
       margin: 0;
       z-index: 2;
