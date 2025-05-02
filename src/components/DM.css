@@ -52,3 +52,16 @@
   color: #fff;
   text-align: center;
 }
+
+@media (max-width: 768px) {
+  .dm-heading {
+    font-size: 24px;      
+    margin-bottom: 20px;
+    margin-top:30px;  
+  }
+
+  .dm-list {
+    justify-content: center; /* center all cards */
+    gap: 20px;               /* tighter gap */
+  }
+}

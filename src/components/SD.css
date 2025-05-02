@@ -52,3 +52,13 @@
   color: #fff;
   text-align: center;
 }
+
+@media (max-width: 768px) {
+  .sd-heading {
+    font-size: 24px;      /* smaller heading */
+    margin-bottom: 20px; 
+    margin-top:30px;
+  }
+
+
+}
