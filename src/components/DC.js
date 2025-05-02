@@ -163,9 +163,11 @@ const DC = () => {
       {showPopup && (
         <PTGReusable caseStudy={selectedCase} onClose={handleClosePopup} />
       )}
+
       <Chatbot /> {/* Add Chatbot here */}
     </div>
   );
 };
 
 export default DC;
+

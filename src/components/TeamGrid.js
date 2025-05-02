@@ -42,14 +42,14 @@ const TeamGrid = () => {
                 <h3>{leader.name}</h3>
                 <p>{leader.title}</p>
                 <Link
-  to={{
-    pathname: "/bio",
-    state: { leader } // ✅ Pass leader data here
-  }}
-  className="read-bio-btn"
->
-  Read Bio
-</Link>
+                to={{
+                  pathname: "/bio",
+                  state: { leader } // ✅ Pass leader data here
+                }}
+                className="read-bio-btn"
+              >
+                Read Bio
+              </Link>
 
               </div>
             </div>

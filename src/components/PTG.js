@@ -1,7 +1,6 @@
 import React from "react";
 import "./PTG.css";
 import commediaLogo from "../assets/commedialogo.jpg"; // Adjust path if needed
-import nlogImage from "../assets/nlog.jpg"; // Adjust path if needed
 
 const PTG = ({ onClose }) => {
   return (
@@ -50,8 +49,6 @@ const PTG = ({ onClose }) => {
           </section>
         </div>
 
-        {/* Bottom Left: Nlog Image */}
-        <img src={nlogImage} alt="Nlog" className="popup-nlog" />
 
         {/* Close Button */}
         <button className="popup-close" onClick={onClose}>✖</button>

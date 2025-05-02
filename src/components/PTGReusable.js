@@ -46,13 +46,13 @@ const PTGReusable = ({ onClose, caseStudy, bottomRightImg }) => {
         </div>
 
         {/* Case study image (bottom right above nlog) */}
-        {caseStudy.img && (
+        {/* {caseStudy.img && (
           <img
             src={caseStudy.img}
             alt={caseStudy.title}
             className="popup-bottom-image"
           />
-        )}
+        )} */}
 
         {/* Optional extra image (bottom right) */}
         {bottomRightImg && (
@@ -65,7 +65,9 @@ const PTGReusable = ({ onClose, caseStudy, bottomRightImg }) => {
 
         {/* Bottom left static logo */}
         <img src={nlogImage} alt="Nlog" className="popup-nlog" />
+      
       </div>
+
     </div>
   );
 };

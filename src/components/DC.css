@@ -1,13 +1,13 @@
 /* src/components/DC.css */
 .dc-container {
   padding: 40px;
-  background: #111; /* dark background */
+  background: #111; 
   min-height: 100vh;
   color: #fff;
 }
 
 .dc-heading {
-  font-size: 28px;           /* shrink heading from 36px to 28px */
+  font-size: 28px;          
   font-weight: bold;
   margin-bottom: 40px;
   color:rgb(166, 212, 0);                
@@ -18,14 +18,14 @@
 
 .dc-case-list {
   display: flex;
-  flex-wrap: wrap;           /* allow wrap */
+  flex-wrap: wrap;           
   gap: 40px;
-  justify-content: center;   /* center cards */
+  justify-content: center;   
 }
 
 .dc-card {
   width: 280px;
-  background-color: #1c1c1c; /* dark card */
+  background-color: #1c1c1c; 
   border: 1px solid #333;
   border-radius: 8px;
   overflow: hidden;
@@ -52,31 +52,29 @@
   text-align: center;
 }
 
-/*────────────────────────────────────────────────
-  Mobile tweaks
-────────────────────────────────────────────────*/
+
 @media (max-width: 768px) {
   .dc-heading {
-    font-size: 12px;         /* slightly smaller on phones */
+    font-size: 12px;       
     margin-bottom: 24px;
   }
 
   .dc-case-list {
-    gap: 20px;               /* tighter gap */
-    justify-content: center; /* keep them centered */
+    gap: 20px;             
+    justify-content: center; 
   }
 
   .dc-card {
-    width: calc(50% - 20px); /* two cards per row */
+    width: calc(50% - 20px); 
     max-width: 300px;
   }
 
   .dc-image {
-    height: 180px;           /* shorter images */
+    height: 180px;           
   }
 
   .dc-title {
-    font-size: 14px;         /* a touch smaller text */
-    padding: 12px 8px;       /* tighter padding */
+    font-size: 14px;        
+    padding: 12px 8px;       
   }
-}
+} 
