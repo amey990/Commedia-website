@@ -148,6 +148,11 @@ padding-top:30px;}
   opacity: 0.8;
 }
 
+.read-bio-btn {
+  font-size: 15px;
+  color:white
+}
+
 /* Animation */
 @keyframes borderFlow {
   0% {
