@@ -35,7 +35,6 @@ import "./styles.css";
 function App() {
   return (
     <Router>
-      <ScrollToTop />
       <div className="app-container">
         <Navbar />
         <div className="main-content">

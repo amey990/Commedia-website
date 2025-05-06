@@ -8,8 +8,12 @@ import Stats from "./Stats";
 import Achievement from "./Achievements";
 import Customers from "./Customers";
 import Chatbot from "../components/Chatbot"; // Import chatbot component
+import useScrollReset from '../hooks/useScrollReset'; // Import the hook
 
 const Home = () => {
+
+  useScrollReset();
+
   return (
     <div className="home-container">
       <HeroSection />
