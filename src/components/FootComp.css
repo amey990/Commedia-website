@@ -91,7 +91,7 @@
 }
 .email-input {
   background-color: #40444A;
-  color: #878080;
+  color:rgb(247, 247, 247);
   padding: 0.5rem 1rem;
   width: 12rem;
   border: none;
@@ -177,7 +177,7 @@
   position: absolute;
   color: white;
   bottom: 6px;
-  right: 110px;
+  right: 210px;
   font-size: 0.875rem;
   margin-right: 1rem;
 }
@@ -295,8 +295,8 @@
   
     .website-text {
       position: absolute;
-      bottom: 20px;        /* adjust up/down as needed */
-      left: 48%;
+      bottom: 30px;        /* adjust up/down as needed */
+      left: 40%;
       transform: translateX(-50%);
       margin: 0;
       z-index: 2;
