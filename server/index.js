@@ -1,5 +1,12 @@
 
-require('dotenv').config({ path: require('path').resolve(__dirname, '.env') });
+// server/index.js
+const path = require('path');
+
+// Load the .env that lives next to this file
+require('dotenv').config({
+  path: path.resolve(__dirname, '.env')
+});
+
 const express     = require('express');
 const cors        = require('cors');
 const multer      = require('multer');
