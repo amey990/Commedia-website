@@ -120,6 +120,21 @@
   background-color: #008fb3;
 }
 
+.loader {
+  border: 2px solid #ccc;
+  border-top: 2px solid #00eaff;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /* Desktop → Tablet */
 @media (max-width: 1024px) {
   .career-container {

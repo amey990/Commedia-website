@@ -1,7 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import ScrollToTop from "./components/ScrollToTop";
-
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import SolutionMain from "./components/SolutionMain";
@@ -16,7 +14,6 @@ import AboutUs from "./components/AboutUs";
 import FootComp from "./components/FootComp";
 import CaseStudies from "./components/CaseStudies";
 import Bio from "./components/Bio";
-
 // Case Study Categories
 import DC from "./components/DC";
 import SD from "./components/SD";

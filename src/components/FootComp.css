@@ -104,11 +104,11 @@
   text-transform: uppercase;
   font-family: 'barlow', sans-serif;
   width: 6rem;
-  height: 2rem;
+  height: 2rem; /* match email input height */
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transform: translateY(11%);
+  align-self: center; /* optional centering in flex */
 }
 
 /* Social Media Section */
@@ -181,6 +181,37 @@
   font-size: 0.875rem;
   margin-right: 1rem;
 }
+
+.status-message {
+  font-size: 0.85rem;
+  margin-top: 8px;
+  margin-left: 50px;
+}
+
+.status-message.success {
+  color: #00ff88;
+}
+
+.status-message.error {
+  color: #ff4d4d;
+}
+
+.loader {
+  border: 2px solid #ccc;
+  border-top: 2px solid #00eaff;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 
 /* ─── Tablet (≤768px) ───────────────────────────────────────────────────────── */
 @media (max-width: 768px) {

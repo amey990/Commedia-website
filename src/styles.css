@@ -17,6 +17,8 @@ html, body {
 /* Main content area that expands to fill available space */
 .main-content {
   flex: 1;  /* Expands this area to fill available space */
+  
+  
 }
 
 /* Footer Styles */

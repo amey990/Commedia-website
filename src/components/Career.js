@@ -1,15 +1,23 @@
-// import React, { useState } from "react";
+// import React, { useState, useRef } from "react"; 
 // import "./Career.css";
-// import uploadIcon from "../assets/upload-icon.png";
 // import careerImage1 from "../assets/caa.jpeg";
-// import Chatbot from "../components/Chatbot"; // Import chatbot component
+// import Chatbot from "../components/Chatbot";
 
 // const Career = () => {
 //   const [resume, setResume] = useState(null);
 //   const [department, setDepartment] = useState("");
+//   const fileInputRef = useRef();
 
-//   const handleFileChange = (event) => {
-//     setResume(event.target.files[0]);
+//   const handleFileChange = (e) => {
+//     if (e.target.files.length) {
+//       setResume(e.target.files[0]);
+//     }
+//   };
+
+//   const clearFile = () => {
+//     setResume(null);
+//     // reset the actual file input so you can re-select the same file if needed
+//     fileInputRef.current.value = "";
 //   };
 
 //   return (
@@ -17,7 +25,11 @@
 //       {/* Left Side - Static Image */}
 //       <div className="career-left">
 //         <div className="career-image-container">
-//           <img src={careerImage1} alt="Career Future" className="career-image" />
+//           <img
+//             src={careerImage1}
+//             alt="Career Future"
+//             className="career-image"
+//           />
 //         </div>
 //       </div>
 
@@ -25,7 +37,7 @@
 //       <div className="career-right">
 //         <h2>Transform Your Career with Us</h2>
 //         <form>
-//           <label>Name</label>
+//         <label>Name</label>
 //           <input type="text" placeholder="Enter your name" required />
 
 //           <label>Phone Number</label>
@@ -35,10 +47,16 @@
 //           <input type="email" placeholder="Enter your email" required />
 
 //           <label>Preferred Role</label>
-//           <select value={department} onChange={(e) => setDepartment(e.target.value)} required>
+//           <select
+//             value={department}
+//             onChange={(e) => setDepartment(e.target.value)}
+//             required
+//           >
 //             <option value="">Select Role</option>
 //             <option value="Business Development">Business Development</option>
-//             <option value="Business Solution Group">Business Solution Group</option>
+//             <option value="Business Solution Group">
+//               Business Solution Group
+//             </option>
 //             <option value="PMGT">Project Management</option>
 //             <option value="Software">Software</option>
 //             <option value="Finance">Finance</option>
@@ -47,42 +65,52 @@
 //             <option value="Service Delivery">Service Delivery</option>
 //             <option value="Network Operations">Network Operations</option>
 //           </select>
-
 //           <label>Upload Your Resume</label>
 //           <div className="resume-submit-container">
 //             <div className="file-upload">
-//               <input type="file" onChange={handleFileChange} />
-//               <div className="upload-box">
-//                 <img src={uploadIcon} alt="Upload" />
-//                 <span>{resume ? resume.name : "Click to Upload"}</span>
-
-               
-//               </div>
+//               <input
+//                 ref={fileInputRef}
+//                 type="file"
+//                 onChange={handleFileChange}
+//               />
+//               {resume && (
+//                 <div
+//                   className="remove-file"
+//                   onClick={clearFile}
+//                   title="Remove file"
+//                 >
+//                   ×
+//                 </div>
+//               )}
 //             </div>
 
-//             <button type="submit" className="submit-btn">Submit</button>
+//             <button type="submit" className="submit-btn">
+//               Submit
+//             </button>
 //           </div>
 //         </form>
 //       </div>
-//       <Chatbot /> {/* Add Chatbot here */}
+
+//       <Chatbot />
 //     </div>
 //   );
 // };
 
 // export default Career;
 
-
-
-/// test ///
-
-import React, { useState, useRef } from "react"; 
-import "./Career.css";
-import careerImage1 from "../assets/caa.jpeg";
-import Chatbot from "../components/Chatbot";
+import React, { useState, useRef } from 'react';
+import axios from 'axios';
+import './Career.css';
+import careerImage1 from '../assets/caa.jpeg';
+import Chatbot from '../components/Chatbot';
 
 const Career = () => {
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [email, setEmail] = useState('');
+  const [department, setDepartment] = useState('');
   const [resume, setResume] = useState(null);
-  const [department, setDepartment] = useState("");
+  const [statusMsg, setStatusMsg] = useState('');
   const fileInputRef = useRef();
 
   const handleFileChange = (e) => {
@@ -93,8 +121,35 @@ const Career = () => {
 
   const clearFile = () => {
     setResume(null);
-    // reset the actual file input so you can re-select the same file if needed
-    fileInputRef.current.value = "";
+    fileInputRef.current.value = '';
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatusMsg('');
+    const data = new FormData();
+    data.append('name', name);
+    data.append('phone', phone);
+    data.append('email', email);
+    data.append('role', department);
+    data.append('resume', resume);
+
+    try {
+      await axios.post('/api/careers', data, {
+        headers: { 'Content-Type': 'multipart/form-data' }
+      });
+      setStatusMsg('Application sent! Thank you.');
+      // reset form
+      setName('');
+      setPhone('');
+      setEmail('');
+      setDepartment('');
+      setResume(null);
+      fileInputRef.current.value = '';
+    } catch (err) {
+      console.error(err);
+      setStatusMsg('Submission failed—please try again.');
+    }
   };
 
   return (
@@ -113,15 +168,33 @@ const Career = () => {
       {/* Right Side - Form Section */}
       <div className="career-right">
         <h2>Transform Your Career with Us</h2>
-        <form>
-        <label>Name</label>
-          <input type="text" placeholder="Enter your name" required />
+        <form onSubmit={handleSubmit}>
+          <label>Name</label>
+          <input
+            type="text"
+            placeholder="Enter your name"
+            required
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
 
           <label>Phone Number</label>
-          <input type="tel" placeholder="Enter your phone number" required />
+          <input
+            type="tel"
+            placeholder="Enter your phone number"
+            required
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+          />
 
           <label>Email ID</label>
-          <input type="email" placeholder="Enter your email" required />
+          <input
+            type="email"
+            placeholder="Enter your email"
+            required
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
 
           <label>Preferred Role</label>
           <select
@@ -131,10 +204,8 @@ const Career = () => {
           >
             <option value="">Select Role</option>
             <option value="Business Development">Business Development</option>
-            <option value="Business Solution Group">
-              Business Solution Group
-            </option>
-            <option value="PMGT">Project Management</option>
+            <option value="Business Solution Group">Business Solution Group</option>
+            <option value="Project Management">Project Management</option>
             <option value="Software">Software</option>
             <option value="Finance">Finance</option>
             <option value="Cloud Solutions">Cloud Solutions</option>
@@ -142,6 +213,7 @@ const Career = () => {
             <option value="Service Delivery">Service Delivery</option>
             <option value="Network Operations">Network Operations</option>
           </select>
+
           <label>Upload Your Resume</label>
           <div className="resume-submit-container">
             <div className="file-upload">
@@ -149,6 +221,7 @@ const Career = () => {
                 ref={fileInputRef}
                 type="file"
                 onChange={handleFileChange}
+                required
               />
               {resume && (
                 <div
@@ -165,6 +238,10 @@ const Career = () => {
               Submit
             </button>
           </div>
+
+          {statusMsg && (
+            <p className="status-message">{statusMsg}</p>
+          )}
         </form>
       </div>
 
@@ -174,3 +251,4 @@ const Career = () => {
 };
 
 export default Career;
+
