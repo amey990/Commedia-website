@@ -1,4 +1,5 @@
-require('dotenv').config();
+// require('dotenv').config();
+require('dotenv').config({ path: require('path').resolve(__dirname, '.env') });
 const express     = require('express');
 const cors        = require('cors');
 const multer      = require('multer');
@@ -63,42 +64,6 @@ Commedia Digital Team
   }
 });
 
-// 2) Careers Apply endpoint (with resume upload)
-// app.post('/api/careers-apply', upload.single('resume'), async (req, res) => {
-//   const { name, phone, email, role } = req.body;
-//   if (!name || !phone || !email || !role) {
-//     return res.status(400).json({ error: 'All fields are required' });
-//   }
-
-//   const mailOptions = {
-//     from:    process.env.SMTP_FROM,
-//     to:      process.env.HR_EMAIL,
-//     subject: `📝 New Application: ${name}`,
-//     text:    `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nRole: ${role}`,
-//     attachments: []
-//   };
-
-//   if (req.file) {
-//     mailOptions.attachments.push({
-//       filename: req.file.originalname,
-//       path:     req.file.path
-//     });
-//   }
-
-//   try {
-//     await transporter.sendMail(mailOptions);
-//     // cleanup temp file
-//     if (req.file) {
-//       fs.unlink(req.file.path, err => {
-//         if (err) console.error('Failed to remove temp file', err);
-//       });
-//     }
-//     res.json({ message: 'Application submitted successfully.' });
-//   } catch (err) {
-//     console.error(err);
-//     res.status(500).json({ error: 'Failed to submit application' });
-//   }
-// });
 
 app.post('/api/careers-apply', upload.single('resume'), async (req, res) => {
   const { name, phone, email, role } = req.body;
