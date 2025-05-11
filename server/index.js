@@ -1,8 +1,6 @@
-
 // server/index.js
 const path = require('path');
-
-// Load the .env that lives next to this file
+// Load server/.env no matter where we ran node from
 require('dotenv').config({
   path: path.resolve(__dirname, '.env')
 });
