@@ -1,9 +1,18 @@
 // server/index.js
 const path = require('path');
-// Load server/.env no matter where we ran node from
+
+// load env from server/.env
 require('dotenv').config({
   path: path.resolve(__dirname, '.env')
 });
+
+// DEBUG: dump key env vars
+console.log('🔍 ENV:', {
+  SMTP_HOST: process.env.SMTP_HOST,
+  SMTP_PORT: process.env.SMTP_PORT,
+  SMTP_USER: process.env.SMTP_USER ? '***set***' : '***MISSING***'
+});
+
 
 const express     = require('express');
 const cors        = require('cors');
