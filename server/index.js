@@ -1,4 +1,4 @@
-// require('dotenv').config();
+
 require('dotenv').config({ path: require('path').resolve(__dirname, '.env') });
 const express     = require('express');
 const cors        = require('cors');
@@ -27,6 +27,7 @@ const transporter = nodemailer.createTransport({
   }
 });
 
+// hello world //
 
 // 1) Stay-in-Touch endpoint
 app.post('/api/stay-in-touch', async (req, res) => {
