@@ -2,10 +2,12 @@ import React from "react";
 import "./PTG.css";
 import commediaLogo from "../assets/commedialogo.jpg";
 import nlogImage from "../assets/nlog.jpg";
+import useScrollTop from '../hooks/useScrollTop';
 
 const PTGReusable = ({ onClose, caseStudy, bottomRightImg }) => {
+  useScrollTop();
   if (!caseStudy) return null;
-
+ 
   return (
     <div className="popup-overlay">
       <div className="popup-box">

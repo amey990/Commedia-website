@@ -1,59 +1,4 @@
-/* Fix white space issue */
-/* html, body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    background-color: #0a0a0a;
-  }
-  
-  .stats-container {
-    text-align: center;
-    padding: 60px 20px;
-    color: white;
-    background-color: #0a0a0a;
-  }
-  
-  .stats-title {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 40px;
-    transform:translateX(-90%);
-  }
-  
-  .stats-grid {
-    display: flex;
-    justify-content: center;
-    gap: 80px;
-    flex-wrap: wrap;
-  }
-  
-  .stat-item {
-    text-align: center;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .stat-label {
-    font-size: 16px;
-    font-weight: 400;
-    color: #bbb;
-    margin-bottom: 5px;
-  }
-  
-  .count-number {
-    font-size: 32px;
-    font-weight: bold;
-    color: #ffffff;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .count-number:hover {
-    color: #00ffff;
-  }
-   */
-
-/* v2  */
-.stats-container {
+/* .stats-container {
   text-align: center;
   padding: 4rem 1rem;
   color: white;
@@ -106,7 +51,7 @@
   color: #00ffff;
 }
 
-/* Mobile Responsiveness */
+
 @media (max-width: 768px) {
   .stats-container {
     padding: 2rem 0.5rem;
@@ -145,6 +90,64 @@
     font-size: 1.8rem;
   }
 
+  .stat-label {
+    font-size: 0.9rem;
+  }
+} */
+
+.stats-section {
+  background: #070a0f;
+  color: #fff;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.stats-header {
+  font-size: 2.4rem;
+  color: #00eaff;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* grid wraps on small screens */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-family: 'BARLOW-BOLD', sans-serif;
+  color: #ffffff;
+}
+
+.stat-label {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  font-family: 'BARLOW-EXTRALIGHT', sans-serif;
+  color: #ccc;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* mobile tweaks */
+@media (max-width: 640px) {
+  .stats-header {
+    font-size: 1.5rem;
+  }
+  .stat-value {
+    font-size: 2.5rem;
+  }
   .stat-label {
     font-size: 0.9rem;
   }

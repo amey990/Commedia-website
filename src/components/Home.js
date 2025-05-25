@@ -8,9 +8,11 @@ import Stats from "./Stats";
 import Achievement from "./Achievements";
 import Customers from "./Customers";
 import Chatbot from "../components/Chatbot"; // Import chatbot component
+import useScrollTop from '../hooks/useScrollTop';
 
 
 const Home = () => {
+  useScrollTop();
   return (
     <div className="home-container">
       <HeroSection />

@@ -3,8 +3,10 @@ import { useHistory } from "react-router-dom";
 import "./VerticalDetail.css";
 import digitalMediaImage from "../assets/digital-media.jpg";
 import Chatbot from "../components/Chatbot"; // Import chatbot component
+import useScrollTop from '../hooks/useScrollTop';
 
 const DigitalMedia = () => {
+  useScrollTop();
   const history = useHistory();
 
   return (

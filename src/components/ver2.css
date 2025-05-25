@@ -20,7 +20,7 @@
   display: flex;
   flex-wrap: wrap; /* allow wrap */
   gap: 40px;
-  justify-content: flex-start; /* align items from left */
+  justify-content: center; /* align items from left */
 }
 
 .dc-card {

@@ -11,6 +11,7 @@ import leader5 from "../assets/leader5.jpg";
 import leader6 from "../assets/leader6.jpg";
 import leader7 from "../assets/leader7.jpg";
 import leader8 from "../assets/leader8.jpg";
+import useScrollTop from '../hooks/useScrollTop';
 
 const leaders = [
   { img: leader1, name: "C S Raghava Rao", title: "Founder & MD", class: "member-1" },
@@ -24,6 +25,7 @@ const leaders = [
 ];
 
 const TeamGrid = () => {
+  useScrollTop();
   return (
     <div className="team-grid-container">
       <div className="team-box">

@@ -6,8 +6,10 @@ import v3img1 from "../assets/ent1.png";
 import v3img2 from "../assets/ent2.png";
 import v3img3 from "../assets/ent3.png";
 import Chatbot from "../components/Chatbot"; // Import chatbot component
+import useScrollTop from '../hooks/useScrollTop';
 
 const Ver3 = () => {
+  useScrollTop();
   const [showPopup, setShowPopup] = useState(false);
   const [selectedCase, setSelectedCase] = useState(null);
 

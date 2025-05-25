@@ -12,6 +12,7 @@ import digiImage from "../assets/digitalmedia.jpg";
 import satelliteImage from "../assets/satellite.jpg";
 import solImage from "../assets/soll.jpg";
 import Chatbot from "../components/Chatbot"; // Import chatbot component
+import useScrollTop from '../hooks/useScrollTop';
 
 const solutionsData = [
   { 
@@ -110,6 +111,7 @@ const solutionsData = [
 
 
 const SolutionMain = () => {
+  useScrollTop();
   return (
     <div className="solution-main-container">
       {/* Cover Section */}

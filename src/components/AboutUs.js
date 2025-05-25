@@ -6,8 +6,10 @@ import Customers from "./Customers";
 import teamBg from "../assets/team.jpg"; // ✅ Import team.jpg
 import Our from "./Our";
 import Chatbot from "../components/Chatbot"; // Import chatbot component
+import useScrollTop from '../hooks/useScrollTop';
 
 const AboutUs = () => {
+  useScrollTop();
   return (
     <div>
       {/* 🔴 Background Image Section Before LAC */}

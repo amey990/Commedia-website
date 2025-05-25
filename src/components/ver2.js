@@ -8,8 +8,10 @@ import dm4 from "../assets/data4.png";
 import dm5 from "../assets/data5.png";
 import dm6 from "../assets/data6.png";
 import Chatbot from "../components/Chatbot"; // Import chatbot component
+import useScrollTop from '../hooks/useScrollTop';
 
 const Ver2 = () => {
+  useScrollTop();
   const [showPopup, setShowPopup] = useState(false);
   const [selectedCase, setSelectedCase] = useState(null);
 

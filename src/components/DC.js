@@ -8,8 +8,10 @@ import dc3 from "../assets/dc3.png";
 import dc4 from "../assets/dc4.png";
 import dc5 from "../assets/dc5.png";
 import Chatbot from "../components/Chatbot"; // Import chatbot component
+import useScrollTop from '../hooks/useScrollTop';
 
 const DC = () => {
+  useScrollTop();
   const [showPopup, setShowPopup] = useState(false);
   const [selectedCase, setSelectedCase] = useState(null);
 
@@ -170,4 +172,3 @@ const DC = () => {
 };
 
 export default DC;
-

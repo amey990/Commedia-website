@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "./LAC.css";
+import useScrollTop from '../hooks/useScrollTop';
 
 // Import images
 import img1 from "../assets/life1.jpg";
@@ -12,6 +13,7 @@ import img5 from "../assets/life5.jpg";
 const images = [img1, img2, img3, img4, img5];
 
 const LifeAtCommedia = () => {
+  useScrollTop();
   const [index, setIndex] = useState(2); // Start from the center image (index 2)
 
   useEffect(() => {

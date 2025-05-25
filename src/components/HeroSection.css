@@ -3,12 +3,21 @@
   src: url('../assets/Barlow-ExtraLight.ttf') format('truetype');
 }
 
-.hero-container {
+/* .hero-container {
   position: relative !important;
   width: 100% !important;
   height: 140vh !important;
   overflow: hidden !important;
   padding-top:25px; 
+} */
+
+.hero-container {
+  position: relative !important;
+  z-index: 0;             /* ensure hero sits at the very back */
+  width: 100% !important;
+  height: 100vh !important;
+  overflow: hidden !important;
+  padding-top: 25px;
 }
 
 
@@ -69,4 +78,43 @@
     font-size: 34px; /* Further reduction for small phones */
     line-height: 1.2;
   }
+}
+
+.hero-container {
+  position: relative !important;
+  width: 100% !important;
+  height: 140vh !important;
+  overflow: hidden !important;
+  padding-top: 25px;
+}
+
+/* new: gradient overlay at bottom */
+.hero-container::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  /* ↑ make this bigger for a longer fade zone */
+  height: 60%;                 
+  background: linear-gradient(
+    to bottom,
+    rgba(7,10,15,0) 0%,
+    #070a0f        100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+
+
+/* ensure your text sits above the gradient */
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 4%;
+  transform: translateY(-50%);
+  color: white;
+  text-align: left;
+  max-width: 50%;
+  opacity: 0.88;
+  z-index: 3;                      /* above the fade overlay */
 }

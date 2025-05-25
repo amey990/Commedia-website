@@ -7,8 +7,11 @@ import nc2 from "../assets/nc2.png";
 import nc3 from "../assets/nc3.png";
 import nc4 from "../assets/nc4.png";
 import Chatbot from "../components/Chatbot"; // Import chatbot component
+import useScrollTop from '../hooks/useScrollTop';
 
 const NS = () => {
+  useScrollTop();
+
   const [showPopup, setShowPopup] = useState(false);
   const [selectedCase, setSelectedCase] = useState(null);
 

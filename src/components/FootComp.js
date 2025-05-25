@@ -292,8 +292,10 @@ import companyLogo from '../assets/commedialogo.jpg';
 import nlog from '../assets/nlog.jpg';
 import phoneIcon from '../assets/phone.png';
 import { FaFacebookF, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
+import useScrollTop from '../hooks/useScrollTop';
 
 const FootComp = () => {
+  useScrollTop();
   const [email, setEmail] = useState('');
   const [statusMsg, setStatusMsg] = useState('');
   const [statusType, setStatusType] = useState(''); // 'success' or 'error'

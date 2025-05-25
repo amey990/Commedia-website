@@ -3,8 +3,10 @@ import visionImg from "../assets/vis.png";
 import missionImg from "../assets/mis.jpg";
 import valuesImg from "../assets/val.jpg";
 import "./Vision.css";
+import useScrollTop from '../hooks/useScrollTop';
 
 const Vision = () => {
+  useScrollTop();
   return (
     <div className="vision-container">
       <h2 className="section-title">Commedia Vision, Mission & Values</h2>

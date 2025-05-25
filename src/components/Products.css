@@ -1,5 +1,5 @@
+/* 
 
-/* — Products Section — */
 .products-section {
   background: #070a0f;
   color: #fff;
@@ -15,7 +15,7 @@
   letter-spacing: 2px;
 }
 
-/* Slider container */
+
 .products-slider {
   width: 100%;
   max-width: 1200px;
@@ -24,7 +24,6 @@
   box-sizing: border-box;
 }
 
-/* Product slide grid */
 .product-slide {
   display: grid;
   grid-template-columns: 1fr;
@@ -39,7 +38,6 @@
   }
 }
 
-/* Image styling */
 .product-image-container {
   width: 100%;
 }
@@ -52,7 +50,6 @@
   box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
 }
 
-/* Text content */
 .product-content {
   text-align: left;
 }
@@ -77,7 +74,6 @@
   line-height: 1.5;
 }
 
-/* Read More button */
 .product-read-more {
   display: inline-block;
   padding: 0.5rem 1rem;
@@ -94,7 +90,6 @@
   color: #070a0f;
 }
 
-/* Mobile Responsiveness */
 @media (max-width: 768px) {
   .products-section {
     padding: 1.4rem 3rem 3rem 0.5rem;
@@ -128,6 +123,147 @@
     font-size: 1.2rem;
   }
 
+  .product-content li {
+    font-size: 0.85rem;
+  }
+} */
+
+/* src/components/Products.css */
+
+/* — Products Section — */
+/* — Products Section — */
+.products-section {
+  background: #070a0f;
+  color: #fff;
+  padding: 4rem 1rem;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.products-title {
+  font-size: 30px;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Slider container — keep your fixed min-height */
+.products-slider {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  min-height: 420px;    /* ← your tallest slide height */
+}
+
+/* Slide layout */
+.product-slide {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .product-slide {
+    grid-template-columns: 1fr 1fr;
+    padding-left: 3rem;
+  }
+}
+
+/* — new, flexible image container — */
+.product-image-container {
+  width: 100%;
+  min-height: 420px;    /* ← same as .products-slider */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #070a0f;  /* so any letterboxed bars match the bg */
+}
+
+.product-image-container img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid #00eaff;
+  box-shadow: 0 0 15px rgba(0,255,255,0.2);
+}
+
+/* Text content */
+.product-content {
+  text-align: left;
+}
+
+.product-content h3 {
+  font-size: 1.8rem;
+  color: #00eaff;
+  margin-bottom: 1rem;
+}
+
+.product-content ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.product-content li {
+  margin-bottom: 0.75rem;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+/* Read More button */
+.product-read-more {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 2px solid #00eaff;
+  border-radius: 5px;
+  color: #00eaff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s, color 0.3s;
+}
+
+.product-read-more:hover {
+  background: #00eaff;
+  color: #070a0f;
+}
+
+/* —— MOBILE FALLBACKS —— */
+@media (max-width: 768px) {
+  .products-slider,
+  .product-image-container {
+    min-height: 300px;  /* downsize on tablet */
+  }
+  .products-section {
+    padding: 1.4rem 3rem 3rem 0.5rem;
+  }
+  .products-title {
+    font-size: 1.8rem;
+  }
+  .product-slide {
+    gap: 1.5rem;
+    padding-left: 0;
+  }
+  .product-content h3 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-slider,
+  .product-image-container {
+    min-height: 200px;  /* downsize on phone */
+  }
+  .products-title {
+    font-size: 1.6rem;
+  }
+  .product-content h3 {
+    font-size: 1.2rem;
+  }
   .product-content li {
     font-size: 0.85rem;
   }

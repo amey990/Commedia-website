@@ -20,7 +20,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
-  justify-content: flex-start; /* align left on desktop */
+  justify-content: center; 
 }
 
 .wn-card {

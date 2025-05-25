@@ -5,6 +5,7 @@ import React from "react";
 import "./Partnerships.css";
 import handshakeImage from "../assets/handshake.jpg";
 import Chatbot from "../components/Chatbot";
+import useScrollTop from '../hooks/useScrollTop';
 
 // two separate lists
 const enterprisePartners = [
@@ -27,6 +28,7 @@ const digitalMediaPartners = [
 ];
 
 export default function Partnerships() {
+  useScrollTop();
   return (
     <div className="partners-container">
       <div className="cover">

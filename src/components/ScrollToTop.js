@@ -2,31 +2,35 @@
 // import { useEffect } from "react";
 // import { useLocation } from "react-router-dom";
 
-// const ScrollToTop = () => {
+// export default function ScrollToTop() {
 //   const { pathname } = useLocation();
-
 //   useEffect(() => {
-//     window.scrollTo(0, 0); // Scroll to the top of the page
+//     // As soon as the URL (pathname) changes, jump to the top
+//     window.scrollTo(0, 0);
 //   }, [pathname]);
-
 //   return null;
-// };
+// }
 
-// export default ScrollToTop;
+// src/components/ScrollToTop.js
+import { Component } from "react";
+import { withRouter } from "react-router-dom";
 
-import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+class ScrollToTop extends Component {
+  componentDidUpdate(prevProps) {
+    if (this.props.location.pathname !== prevProps.location.pathname) {
+      // try scrolling the main-content div
+      const main = document.querySelector(".main-content");
+      if (main) {
+        main.scrollTop = 0;
+      } else {
+        window.scrollTo(0, 0);
+      }
+    }
+  }
 
-function ScrollToTop() {
-  const { pathname } = useLocation();
-
-  useEffect(() => {
-    window.scrollTo(0, 0); // Instantly scroll to top
-    // Optional: Smooth scrolling (uncomment if preferred)
-    // window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [pathname]);
-
-  return null; // This component doesn't render anything
+  render() {
+    return this.props.children;
+  }
 }
 
-export default ScrollToTop;
+export default withRouter(ScrollToTop);

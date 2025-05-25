@@ -3,6 +3,7 @@ import sdwanImage from "../assets/sdwan.jpg";
 import securityImage from "../assets/security.jpg";
 import Chatbot from "../components/Chatbot"; // Import chatbot component
 
+
 const solutionsData = [
   {
     id: 1,

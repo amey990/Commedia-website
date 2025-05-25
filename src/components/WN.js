@@ -8,8 +8,10 @@ import wn3 from "../assets/wn3.png";
 import wn4 from "../assets/wn4.png";
 import wn5 from "../assets/wn5.png";
 import Chatbot from "../components/Chatbot"; // Import chatbot component
+import useScrollTop from '../hooks/useScrollTop';
 
 const WN = () => {
+  useScrollTop();
   const [showPopup, setShowPopup] = useState(false);
   const [selectedCase, setSelectedCase] = useState(null);
 

@@ -10,6 +10,7 @@ import enterpriseImage from "../assets/enterprise.jpg";
 import governmentImage from "../assets/government.jpg";
 import Customers from "./Customers";
 import Chatbot from "../components/Chatbot"; // Import chatbot component
+import useScrollTop from '../hooks/useScrollTop';
 
 const sections = [
   {
@@ -43,6 +44,7 @@ const sections = [
 ];
 
 const Verticals = () => {
+  useScrollTop();
   return (
     <>
       {/* Cover Section OUTSIDE the main container */}

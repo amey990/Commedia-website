@@ -78,8 +78,10 @@ import React, { useState, useEffect, useRef } from "react";
 import "./Our.css";
 import map1 from "../assets/map1.jpg";
 import map2 from "../assets/map2.jpg";
+import useScrollTop from '../hooks/useScrollTop';
 
 const Our = () => {
+  useScrollTop();
   const [showFirst, setShowFirst] = useState(true);
   const containerRef = useRef(null);
 

@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./Journey.css";
+import useScrollTop from '../hooks/useScrollTop';
 
 const Journey = () => {
+  useScrollTop();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {

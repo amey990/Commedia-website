@@ -14,8 +14,10 @@ import ses from "../assets/ses.png";
 import sony from "../assets/sony.png";
 import stc from "../assets/stc.png";
 import star from "../assets/star.png";
+import useScrollTop from '../hooks/useScrollTop';
 
 const Customers = () => {
+  useScrollTop();
   const sliderRef = useRef(null);
   const scrollAmount = 300;
 

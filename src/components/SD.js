@@ -5,8 +5,10 @@ import sd1 from "../assets/sd1.png";
 import sd2 from "../assets/sd2.png";
 import sd3 from "../assets/sd3.png";
 import Chatbot from "../components/Chatbot"; // Import chatbot component
+import useScrollTop from '../hooks/useScrollTop';
 
 const SD = () => {
+  useScrollTop();
   const [showPopup, setShowPopup] = useState(false);
   const [selectedCase, setSelectedCase] = useState(null);
 

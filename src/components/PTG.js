@@ -1,8 +1,10 @@
 import React from "react";
 import "./PTG.css";
 import commediaLogo from "../assets/commedialogo.jpg"; // Adjust path if needed
+import useScrollTop from '../hooks/useScrollTop';
 
 const PTG = ({ onClose }) => {
+  useScrollTop();
   return (
     <div className="popup-overlay">
       <div className="popup-box">

@@ -1,4 +1,4 @@
-html::-webkit-scrollbar,
+ html::-webkit-scrollbar,
 body::-webkit-scrollbar {
   display: none;
 }
@@ -49,10 +49,12 @@ body {
   align-items: center;
 }
 
+
 .logo img {
   height: 30px;
   max-width: 120px;
   margin-right: 90px;
+
 }
 
 .nav-links {
@@ -62,6 +64,7 @@ body {
   gap: 17px;
   margin: 0;
   padding: 0;
+
 }
 
 .nav-links li {
@@ -160,19 +163,17 @@ body {
 }
 
 @media (max-width: 768px) {
-  /* hide desktop menu */
+
   
   .nav-links,
   .dropdown {
     display: none;
   }
 
-  /* show hamburger */
   .mobile-menu-icon {
     display: block;
   }
 
-  /* drawer panel */
   .mobile-drawer {
     position: fixed;
     top: 0; right: -100%;
@@ -195,7 +196,6 @@ body {
     color: #fff;
   }
 
-  /* tighten gap between each top‐level item */
   .mobile-nav-links {
     list-style: none;
     padding: 0 20px;
@@ -203,7 +203,7 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 8px;              /* ↓ was 12px, now 8px */
+    gap: 8px;              
     overflow-y: auto;
     overscroll-behavior: contain;
   }
@@ -213,19 +213,19 @@ body {
     color: #fff;
     font-size: 16px;
     font-family: 'Orbitron', sans-serif;
-    padding: 4px 0;         /* ensure consistent tappable area */
+    padding: 4px 0;         
     transition: color 0.2s;
   }
   .mobile-nav-links li a:hover {
     color: #00bcd4;
   }
 
-  /* ——— Case Studies accordion header ——— */
+
   .mobile-accordion-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 6px 0;         /* ↓ was 12px 0, now 6px 0 */
+    padding: 6px 0;      
     font-size: 16px;
     color: #fff;
   }
@@ -234,24 +234,21 @@ body {
     cursor: pointer;
   }
 
-  /* ——— Nested submenu block ——— */
   .mobile-submenu-block {
-    padding-left: 12px;     /* slight indent */
-    margin: 0;              /* remove extra top/bottom margin */
+    padding-left: 12px;     
+    margin: 0;              
   }
 
-  /* ——— Solutions / Verticals toggles ——— */
   .mobile-sub-toggle {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 4px 0;         /* tighter padding */
+    padding: 4px 0;         
     font-size: 14px;
     color: #fff;
     cursor: pointer;
   }
 
-  /* ——— Nested links ——— */
   .mobile-submenu {
     list-style: none;
     padding-left: 16px;
@@ -270,10 +267,6 @@ body {
     color: #00bcd4;
   }
 }
-
-
-
-
 
 
 

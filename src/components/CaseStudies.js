@@ -17,8 +17,10 @@ import dm1 from "../assets/dm1.png";
 import dm2 from "../assets/dm2.png";
 import dm3 from "../assets/dm3.png";
 import Chatbot from "../components/Chatbot"; // Import chatbot component
+import useScrollTop from '../hooks/useScrollTop';
 
 const CaseStudies = () => {
+  useScrollTop();
   const [showPopup, setShowPopup] = useState(false);
   const [selectedCase, setSelectedCase] = useState(null);
 

@@ -1,12 +1,12 @@
-.solutions-section {
+/* .solutions-section {
   background: #070a0f;
+  background-color: transparent; 
   color: #fff;
   padding: 4rem 1rem;      
   text-align: center;
   overflow-x: hidden;      
 }
 
-/* Title */
 .solutions-title {
   font-size: 30px;
   margin-bottom: 2rem;
@@ -14,21 +14,21 @@
   letter-spacing: 2px;
 }
 
-/* Slider wrapper */
+
 .solutions-slider {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  overflow: hidden;        /* hide anything outside this box */
-  padding: 0 1rem;         /* inner gutter so children can’t touch edges */
+  overflow: hidden;        
+  padding: 0 1rem;         
   box-sizing: border-box;
 }
 
-/* Single “slide” = one image + its text */
+
 .slide {
   display: grid;
   width: 100%;
-  grid-template-columns: 1fr;  /* stack on mobile */
+  grid-template-columns: 1fr;  
   gap: 2rem;
   align-items: center;
 }
@@ -88,11 +88,11 @@
   color: #070a0f;
 }
 
-/* —— MOBILE TWEAKS —— */
+
 @media (max-width: 640px) {
   .solutions-section {
     padding: 1.4rem 3rem 2rem 0.5rem;
-    overflow-x: hidden;  /* just in case */
+    overflow-x: hidden;
   }
   .solutions-title {
     font-size: 1.6rem;
@@ -102,4 +102,134 @@
   }
 }
 
+ */
+
+ /* — Solutions Section — */
+.solutions-section {
+  background-color: transparent;
+  color: #fff;
+  padding: 4rem 1rem;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* Title */
+.solutions-title {
+  font-size: 30px;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Slider wrapper (fixed min-height) */
+.solutions-slider {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+
+  /* same height as your images’ tallest variant */
+  min-height: 420px;
+  overflow: hidden;
+}
+
+/* Slide = image + text */
+.slide {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .slide {
+    grid-template-columns: 1fr 1fr;
+    padding-left: 3rem;
+  }
+}
+
+/* — letterboxing container — */
+.slide-image-container {
+  width: 100%;
+  min-height: 420px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+
+.slide-image-container img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid #00eaff;
+  box-shadow: 0 0 15px rgba(0,255,255,0.2);
+}
+
+/* Text column */
+.slide-content {
+  text-align: left;
+}
+
+.slide-content h3 {
+  font-size: 1.8rem;
+  color: #00eaff;
+  margin-bottom: 1rem;
+}
+
+.slide-content ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.slide-content li {
+  margin-bottom: 0.75rem;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+.slide-button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 2px solid #00eaff;
+  border-radius: 5px;
+  color: #00eaff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s, color 0.3s;
+}
+
+.slide-button:hover {
+  background: #00eaff;
+  color: #070a0f;
+}
+
+/* —— MOBILE OVERRIDES —— */
+@media (max-width: 768px) {
+  .solutions-slider,
+  .slide-image-container {
+    min-height: 300px;
+  }
+  .solutions-section {
+    padding: 1.4rem 3rem 2rem 0.5rem;
+  }
+  .solutions-title {
+    font-size: 1.6rem;
+  }
+  .slide {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .solutions-slider,
+  .slide-image-container {
+    min-height: 200px;
+  }
+}
 

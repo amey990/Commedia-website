@@ -1,5 +1,5 @@
 import React from "react";
-
+import useScrollTop from '../hooks/useScrollTop';
 const leaders = [
   {
     name: "Pawan Chandana",
@@ -22,6 +22,7 @@ const leaders = [
 ];
 
 const LeadersBlock = () => {
+  useScrollTop();
   return (
     <div className="bg-black text-white py-16 px-6">
       {/* Section Title */}

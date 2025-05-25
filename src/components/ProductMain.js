@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "./ProductMain.css";
 import prodImage from "../assets/prod.jpg";
 import Customers from "./Customers";
+import useScrollTop from '../hooks/useScrollTop';
 
 // Product Images
 import helmetImage from "../assets/helmet.jpg";
@@ -66,6 +67,7 @@ const productsData = [
 ];
 
 const ProductMain = () => {
+  useScrollTop();
   // Scroll to top on load
   useEffect(() => {
     window.scrollTo(0, 0);

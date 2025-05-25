@@ -8,6 +8,7 @@ import telecomImage from "../assets/telecom.jpg";
 import digitalMediaImage from "../assets/digitalmedia.jpg";
 import enterpriseImage from "../assets/enterprise.jpg";
 import governmentImage from "../assets/government.jpg";
+import useScrollTop from '../hooks/useScrollTop';
 
 const verticalData = {
   telecom: {
@@ -82,6 +83,7 @@ const verticalData = {
 };
 
 const VerticalDetail = () => {
+  useScrollTop();
   const { id } = useParams(); // Get dynamic part of the URL
   const history = useHistory(); // For navigation
 
