@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"; // ✅ Add this
 import "./TeamGrid.css";
 import leader1 from "../assets/leader1.jpg";
 // import leader2 from "../assets/leader2.jpg";
-import leader2 from "../assets/leader2.png";
+import leader2 from "../assets/leader2.jpeg";
 import leader3 from "../assets/leader3.jpg";
 import leader4 from "../assets/leader4.jpg";
 import leader5 from "../assets/leader5.jpg";
