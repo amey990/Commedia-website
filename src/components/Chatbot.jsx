@@ -11,7 +11,8 @@ const Chatbot = () => {
 
   useEffect(() => {
     const preloadIframe = document.createElement('iframe');
-    preloadIframe.src = "https://csplcpal.com/";
+    // preloadIframe.src = "https://csplcpal.com/";
+    preloadIframe.src = "https://cpal.commedialabs.com";
     preloadIframe.style.display = 'none';
     document.body.appendChild(preloadIframe);
 
@@ -27,23 +28,7 @@ const Chatbot = () => {
     <>
       {/* Chatbox Container */}
       <div className={`chatbot-container ${isOpen ? 'visible' : 'hidden'}`}>
-        <div className="chatbot-header">
-          <div className="bot-info">
-            <div className="bot-icon">
-              <RiRobot2Line className="bot-icon-svg" />
-            </div>
-            <div className="bot-status">
-              <span className="bot-title">c-PAL</span>
-              <div className="status-indicator">
-                <span className="status-dot"></span>
-                <span className="status-text">Online Now</span>
-              </div>
-            </div>
-          </div>
-          <button className="close-btn" onClick={() => setIsOpen(false)}>
-            <X size={20} />
-          </button>
-        </div>
+        
 
         {isLoading && (
           <div className="chatbot-loader">
@@ -52,7 +37,7 @@ const Chatbot = () => {
         )}
 
         <iframe
-          src="https://csplcpal.com/"
+          src="https://cpal.commedialabs.com"
           title="Chatbot"
           className="chatbot-iframe"
           onLoad={() => setIsLoading(false)}
