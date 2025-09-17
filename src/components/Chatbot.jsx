@@ -1,8 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
 import './Chatbot.css';
-import { MessageCircle, X } from 'lucide-react';
-import { RiRobot2Line } from 'react-icons/ri';
+import { MessageCircle } from 'lucide-react';
+
 
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
