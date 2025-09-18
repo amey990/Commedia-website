@@ -93,7 +93,7 @@ const digitalMediaPartners = [
    "Logitech_logo.png","kramer_logo.png",
    "Shure_logo.png","Lumen_logo.png","Extron.png","AMX.png",
    "Crestron_logo.png","HpPoly_logo.png","Novastar_logo.png","Lightware_logo.png",
-   "Jabra_logo.png","barco_logo.png","Mersive_logo.png","christie_logo.png","biamp_logo.png","harman_logo.png","QSC_logo.png",
+   "Jabra_logo.png","barco_logo.png","Mersive_logo.png","christie_logo.png","biamp_logo.png","QSC_logo.png","harman_logo.png",
 
   
 
