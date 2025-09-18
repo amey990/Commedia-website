@@ -78,7 +78,7 @@ import "./Customers.css";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 // Import logos
-import kramerLogo from "../assets/Partners/kramer_logo.png"; // Import the Kramer logo
+// import kramerLogo from "../assets/Partners/kramer_logo.png"; // Import the Kramer logo
 import tata from "../assets/tata.jpg";
 import encompass from "../assets/encompass.png";
 import airtel from "../assets/airtel.jpg";
@@ -93,11 +93,11 @@ import stc from "../assets/stc.png";
 import star from "../assets/star.png";
 
 // Import the new logos
-import Logitech_logo from "../assets/Partners/Logitech_logo.png";
-import Lumen_logo from "../assets/Partners/Lumen_logo.png";
-import Netgear_logo from "../assets/Partners/Netgear_logo.png";
-import Shure_logo from "../assets/Partners/Shure_logo.png";
-import Yealink_logo from "../assets/Partners/Yealink_logo.png";
+// import Logitech_logo from "../assets/Partners/Logitech_logo.png";
+// import Lumen_logo from "../assets/Partners/Lumen_logo.png";
+// import Netgear_logo from "../assets/Partners/Netgear_logo.png";
+// import Shure_logo from "../assets/Partners/Shure_logo.png";
+// import Yealink_logo from "../assets/Partners/Yealink_logo.png";
 
 import useScrollTop from '../hooks/useScrollTop';
 
@@ -133,12 +133,12 @@ const Customers = () => {
     star,
     sony,
     stc,
-    Logitech_logo, // New logos
-    Lumen_logo,
-    Netgear_logo,
-    Shure_logo,
-    kramerLogo,  // Kramer logo first
-    Yealink_logo
+    // Logitech_logo, // New logos
+    // Lumen_logo,
+    // Netgear_logo,
+    // Shure_logo,
+    // kramerLogo,  // Kramer logo first
+    // Yealink_logo
     
   ];
 
