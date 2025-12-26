@@ -37,7 +37,7 @@ const Chatbot = () => {
         )}
 
         <iframe
-          src="https://cpal.commedialabs.com"
+          src="https://cpal.cspllabs.com/"
           title="Chatbot"
           className="chatbot-iframe"
           onLoad={() => setIsLoading(false)}
