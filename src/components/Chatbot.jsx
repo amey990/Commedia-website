@@ -71,6 +71,7 @@ import { MessageCircle } from 'lucide-react';
 
 const CHATBOT_URL = 'https://cpal.cspllabs.com/';
 
+
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
@@ -124,5 +125,5 @@ const Chatbot = () => {
 };
 
 export default Chatbot;
-  
+
 
