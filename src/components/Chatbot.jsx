@@ -11,7 +11,6 @@ const Chatbot = () => {
 
   useEffect(() => {
     const preloadIframe = document.createElement('iframe');
-    // preloadIframe.src = "https://csplcpal.com/";
     preloadIframe.src = "https://cpal.cspllabs.com/";
     preloadIframe.style.display = 'none';
     document.body.appendChild(preloadIframe);
