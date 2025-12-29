@@ -71,23 +71,23 @@ import { MessageCircle } from 'lucide-react';
 
 const CHATBOT_URL = 'https://cpal.cspllabs.com/';
 
-
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const [showTag, setShowTag] = useState(true);
+  const [showTag] = useState(true);
 
   useEffect(() => {
-    const preloadIframe = document.createElement('iframe');
-    preloadIframe.src = "https://cpal.cspllabs.com/";
-    preloadIframe.style.display = 'none';
-    document.body.appendChild(preloadIframe);
-
-    // Show the tag on initial load
-    setShowTag(true);
+    // Preload iframe silently
+    const iframe = document.createElement('iframe');
+    iframe.src = CHATBOT_URL;
+    iframe.style.display = 'none';
+    document.body.appendChild(iframe);
 
     return () => {
-      document.body.removeChild(iframe);
+      // Cleanup on unmount
+      if (iframe && iframe.parentNode) {
+        iframe.parentNode.removeChild(iframe);
+      }
     };
   }, []);
 
@@ -103,7 +103,7 @@ const Chatbot = () => {
 
         <iframe
           src={CHATBOT_URL}
-          title="C‑Pal Assistant"
+          title="C-Pal Assistant"
           className="chatbot-iframe"
           onLoad={() => setIsLoading(false)}
           style={{ display: isLoading ? 'none' : 'block' }}
@@ -112,7 +112,7 @@ const Chatbot = () => {
 
       {/* Helper Tag */}
       {showTag && !isOpen && (
-        <div className="chatbot-tag">Need Help? C‑Pal is Here</div>
+        <div className="chatbot-tag">Need Help? C-Pal is Here</div>
       )}
 
       {/* Toggle Button */}
@@ -127,5 +127,3 @@ const Chatbot = () => {
 };
 
 export default Chatbot;
-
-
